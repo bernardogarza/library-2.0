@@ -7,7 +7,7 @@ class Book {
   }
 }
 
-function changeStatus(status) {
+let changeStatus = status => {
   const index = status.parentElement.parentElement.rowIndex;
   const readAttribute = JSON.parse(localStorage.books);
   if (readAttribute[index - 1].read === true) {
@@ -99,7 +99,7 @@ class UI {
   }
 }
 
-function deleteBookFromLocalstorage(book) {
+let deleteBookFromLocalstorage = book => {
   const index = book.parentElement.parentElement.rowIndex;
   const delBook = JSON.parse(localStorage.books);
   delBook.splice(index - 1, 1);
